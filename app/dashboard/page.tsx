@@ -2,7 +2,7 @@ import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { format } from "date-fns";
-import { PlusIcon } from "lucide-react";
+import { PencilIcon, PlusIcon } from "lucide-react";
 import { getWorkoutsByDate } from "@/data/workouts";
 import { WorkoutDatePicker } from "./workout-date-picker";
 import { Button } from "@/components/ui/button";
@@ -49,8 +49,13 @@ export default async function DashboardPage({
         <div className="space-y-6">
           {userWorkouts.map((workout) => (
             <Card key={workout.id}>
-              <CardHeader>
+              <CardHeader className="flex flex-row items-center justify-between">
                 <CardTitle>{workout.name ?? "Untitled Workout"}</CardTitle>
+                <Button variant="ghost" size="icon" asChild>
+                  <Link href={`/dashboard/workout/${workout.id}`}>
+                    <PencilIcon className="size-4" />
+                  </Link>
+                </Button>
                 {workout.startedAt && workout.completedAt && (
                   <p className="text-muted-foreground text-sm">
                     {format(new Date(workout.startedAt), "h:mm a")} &ndash;{" "}

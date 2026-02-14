@@ -8,6 +8,7 @@ Before generating any code, **always** read and follow the relevant docs in the 
 
 - `docs/ui.md` — UI component and date formatting standards
 - `docs/auth.md` — Authentication with Clerk
+- `docs/server-components.md` — Server components, async params/searchParams
 - `docs/data-fetching.md` — Data fetching, database queries, and user data isolation
 - `docs/data-mutations.md` — Data mutations, server actions, and Zod validation
 
