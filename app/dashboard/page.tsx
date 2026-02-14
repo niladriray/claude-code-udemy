@@ -1,8 +1,11 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+import Link from "next/link";
 import { format } from "date-fns";
+import { PlusIcon } from "lucide-react";
 import { getWorkoutsByDate } from "@/data/workouts";
 import { WorkoutDatePicker } from "./workout-date-picker";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -27,7 +30,15 @@ export default async function DashboardPage({
     <main className="mx-auto max-w-2xl px-4 py-8">
       <div className="mb-6 flex items-center justify-between">
         <h1 className="text-2xl font-bold">Workouts</h1>
-        <WorkoutDatePicker selectedDate={selectedDate} />
+        <div className="flex items-center gap-2">
+          <Button asChild>
+            <Link href="/dashboard/workout/new">
+              <PlusIcon className="size-4" />
+              New Workout
+            </Link>
+          </Button>
+          <WorkoutDatePicker selectedDate={selectedDate} />
+        </div>
       </div>
 
       {userWorkouts.length === 0 ? (
