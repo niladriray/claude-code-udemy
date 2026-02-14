@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { format, parseISO } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,13 +11,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { useState } from "react";
 
-export function WorkoutDatePicker({
-  selectedDate,
-}: {
-  selectedDate: string;
-}) {
+export function WorkoutDatePicker({ selectedDate }: { selectedDate: string }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const date = parseISO(selectedDate);

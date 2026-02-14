@@ -7,6 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Before generating any code, **always** read and follow the relevant docs in the `docs/` directory. These contain mandatory coding standards for this project:
 
 - `docs/ui.md` — UI component and date formatting standards
+- `docs/data-fetching.md` — Data fetching, database queries, and user data isolation
 
 ## Commands
 
