@@ -78,3 +78,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - Environment variables (`DATABASE_URL`, Clerk keys) mapped as Vercel secrets
 - Middleware (`proxy.ts`) runs on Vercel Edge Runtime
 - Build command: `npm run build`, start: `npm run start`
+ 
