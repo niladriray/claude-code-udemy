@@ -11,6 +11,7 @@ Before generating any code, **always** read and follow the relevant docs in the 
 - `docs/server-components.md` — Server components, async params/searchParams
 - `docs/data-fetching.md` — Data fetching, database queries, and user data isolation
 - `docs/data-mutations.md` — Data mutations, server actions, and Zod validation
+- `docs/routes.md` — Routing standards, route protection via middleware, dashboard route structure
 
 ## Commands
 
